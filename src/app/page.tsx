@@ -2,6 +2,7 @@ import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import Interests from '@/components/Interests'
 import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
@@ -40,6 +41,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <Interests />
         <Contact />
       </main>
     </>

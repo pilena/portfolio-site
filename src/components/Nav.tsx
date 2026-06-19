@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-const links = ['About', 'Experience', 'Projects', 'Contact']
+const links = ['About', 'Experience', 'Projects', 'Interests', 'Contact']
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
