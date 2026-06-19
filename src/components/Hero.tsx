@@ -83,7 +83,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative flex justify-center"
         >
-          <div className="relative w-72 h-96 md:w-80 md:h-440px">
+          <div className="relative w-72 h-96 md:w-80 md:h-[440px]">
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 src="/lenka.jpg"
@@ -103,17 +103,17 @@ export default function Hero() {
             </div>
             <div className="absolute inset-0 border border-[#f9a8d4]/20" />
             <div className="absolute -bottom-3 -right-3 w-full h-full border border-[#f9a8d4]/10" />
-          </div>
 
-          <motion.div
-            initial={reduceMotion ? {} : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="absolute bottom-6 -left-4 bg-[#161616] border border-[#242424] px-4 py-3"
-          >
-            <p className="text-xs text-[#a0a0a0] tracking-wide">Experience</p>
-            <p className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4]">5 years</p>
-          </motion.div>
+            <motion.div
+              initial={reduceMotion ? {} : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+              className="absolute bottom-6 -left-4 bg-[#161616] border border-[#242424] px-4 py-3"
+            >
+              <p className="text-xs text-[#a0a0a0] tracking-wide">Experience</p>
+              <p className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4]">5 years</p>
+            </motion.div>
+          </div>
         </motion.div>
 
       </div>
