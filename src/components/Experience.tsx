@@ -77,7 +77,7 @@ export default function Experience() {
                 transition={{ duration: 0.7, delay: 0.1 + i * 0.15 }}
                 className="relative"
               >
-                <div className="absolute -left-8 md:-left-16 top-1.5 w-2 h-2 rounded-full border border-[#f9a8d4] bg-[#0e0e0e]" />
+                <div className="absolute -left-8 md:-left-16 top-1.5 w-2 h-2 rounded-full border border-[#f9a8d4] bg-[#f9a8d4]" />
 
                 <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-3 gap-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4]">
