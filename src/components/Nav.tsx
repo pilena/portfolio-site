@@ -31,7 +31,7 @@ export default function Nav() {
           <li key={link}>
             <a
               href={`#${link.toLowerCase()}`}
-              className="text-xs tracking-widest uppercase text-[#6b6b6b] hover:text-[#f9a8d4] transition-colors duration-300"
+              className="text-xs tracking-widest uppercase text-[#a0a0a0] hover:text-[#f9a8d4] transition-colors duration-300"
             >
               {link}
             </a>

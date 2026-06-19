@@ -82,12 +82,12 @@ export default function Experience() {
                   <h3 className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4]">
                     {job.role}
                   </h3>
-                  <span className="text-xs tracking-widest text-[#6b6b6b] uppercase">{job.period}</span>
+                  <span className="text-xs tracking-widest text-[#a0a0a0] uppercase">{job.period}</span>
                 </div>
                 <p className="text-xs tracking-wide text-[#f9a8d4] mb-4 uppercase">{job.company} · {job.location}</p>
                 <ul className="space-y-2">
                   {job.bullets.map((b, j) => (
-                    <li key={j} className="text-sm text-[#6b6b6b] leading-relaxed flex gap-3">
+                    <li key={j} className="text-sm text-[#a0a0a0] leading-relaxed flex gap-3">
                       <span className="text-[#f9a8d4]/40 mt-1 flex-shrink-0">—</span>
                       {b}
                     </li>

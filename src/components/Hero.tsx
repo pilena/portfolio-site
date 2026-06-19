@@ -38,7 +38,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <p className="text-xs tracking-[0.3em] uppercase text-[#6b6b6b] mb-6">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#a0a0a0] mb-6">
             Hello, I&apos;m
           </p>
           <h1 className="font-['Cormorant_Garamond'] text-6xl md:text-8xl font-light text-[#f0ece4] leading-[1.05] mb-6">
@@ -51,7 +51,7 @@ export default function Hero() {
             </span>
             <span className="w-px h-4 bg-[#f9a8d4] animate-pulse" />
           </div>
-          <p className="text-[#6b6b6b] text-sm leading-relaxed max-w-md mb-10">
+          <p className="text-[#a0a0a0] text-sm leading-relaxed max-w-md mb-10">
             Five years building complete web solutions — from concept to production.
             Specializing in React, Next.js, and headless e-commerce platforms.
           </p>
@@ -64,7 +64,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="text-xs tracking-widest uppercase px-6 py-3 border border-[#242424] text-[#6b6b6b] hover:border-[#f9a8d4] hover:text-[#f9a8d4] transition-all duration-300"
+              className="text-xs tracking-widest uppercase px-6 py-3 border border-[#242424] text-[#a0a0a0] hover:border-[#f9a8d4] hover:text-[#f9a8d4] transition-all duration-300"
             >
               Get in touch
             </a>
@@ -105,7 +105,7 @@ export default function Hero() {
             transition={{ delay: 1.2 }}
             className="absolute bottom-6 -left-4 bg-[#161616] border border-[#242424] px-4 py-3"
           >
-            <p className="text-xs text-[#6b6b6b] tracking-wide">Experience</p>
+            <p className="text-xs text-[#a0a0a0] tracking-wide">Experience</p>
             <p className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4]">5 years</p>
           </motion.div>
         </motion.div>

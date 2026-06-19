@@ -29,7 +29,7 @@ export default function About() {
             Crafting interfaces<br />
             <span className="italic">where design<br />meets code</span>
           </h2>
-          <div className="space-y-4 text-[#6b6b6b] text-sm leading-relaxed">
+          <div className="space-y-4 text-[#a0a0a0] text-sm leading-relaxed">
             <p>
               I&apos;m a frontend developer based in Serbia with five years of experience
               delivering complete web solutions — from early discovery and design phases
@@ -59,7 +59,7 @@ export default function About() {
               href="https://github.com/pilena"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs tracking-widest uppercase text-[#6b6b6b] border-b border-[#6b6b6b]/40 hover:text-[#f9a8d4] hover:border-[#f9a8d4] transition-colors pb-0.5"
+              className="text-xs tracking-widest uppercase text-[#a0a0a0] border-b border-[#a0a0a0]/40 hover:text-[#f9a8d4] hover:border-[#f9a8d4] transition-colors pb-0.5"
             >
               GitHub
             </a>
@@ -71,7 +71,7 @@ export default function About() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-xs tracking-[0.3em] uppercase text-[#6b6b6b] mb-6">Tech stack</p>
+          <p className="text-xs tracking-[0.3em] uppercase text-[#a0a0a0] mb-6">Tech stack</p>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, i) => (
               <motion.span
@@ -79,7 +79,7 @@ export default function About() {
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.04 }}
-                className="text-xs px-3 py-1.5 border border-[#242424] text-[#6b6b6b] hover:border-[#f9a8d4]/50 hover:text-[#f9a8d4] transition-all duration-300"
+                className="text-xs px-3 py-1.5 border border-[#242424] text-[#a0a0a0] hover:border-[#f9a8d4]/50 hover:text-[#f9a8d4] transition-all duration-300"
               >
                 {skill}
               </motion.span>

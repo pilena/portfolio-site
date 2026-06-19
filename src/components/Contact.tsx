@@ -21,7 +21,7 @@ export default function Contact() {
             Let&apos;s work<br />
             <span className="italic">together</span>
           </h2>
-          <p className="text-sm text-[#6b6b6b] max-w-sm mx-auto mb-12 leading-relaxed">
+          <p className="text-sm text-[#a0a0a0] max-w-sm mx-auto mb-12 leading-relaxed">
             Open to new opportunities — whether that&apos;s a full-time role, a freelance project, or just a conversation.
           </p>
           <a
@@ -35,7 +35,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/lenka-zivkovic/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs tracking-widest uppercase text-[#6b6b6b] hover:text-[#f9a8d4] transition-colors duration-300"
+              className="text-xs tracking-widest uppercase text-[#a0a0a0] hover:text-[#f9a8d4] transition-colors duration-300"
             >
               LinkedIn
             </a>
@@ -43,7 +43,7 @@ export default function Contact() {
               href="https://github.com/pilena"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs tracking-widest uppercase text-[#6b6b6b] hover:text-[#f9a8d4] transition-colors duration-300"
+              className="text-xs tracking-widest uppercase text-[#a0a0a0] hover:text-[#f9a8d4] transition-colors duration-300"
             >
               GitHub
             </a>
@@ -55,7 +55,7 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ delay: 0.5 }}
-        className="mt-24 pt-8 border-t border-[#242424] flex justify-between items-center text-[10px] tracking-widest uppercase text-[#6b6b6b]"
+        className="mt-24 pt-8 border-t border-[#242424] flex justify-between items-center text-[10px] tracking-widest uppercase text-[#a0a0a0]"
       >
         <span>Lenka Živković</span>
         <span>© 2025</span>

@@ -81,16 +81,16 @@ export default function Projects() {
               className="group bg-[#0e0e0e] p-8 flex flex-col gap-4 hover:bg-[#161616] transition-colors duration-300"
             >
               <div className="flex justify-between items-start">
-                <span className="text-[10px] tracking-widest uppercase text-[#6b6b6b]">{project.type}</span>
+                <span className="text-[10px] tracking-widest uppercase text-[#a0a0a0]">{project.type}</span>
                 <span className="text-[#f9a8d4]/0 group-hover:text-[#f9a8d4] transition-colors duration-300 text-lg">↗</span>
               </div>
               <h3 className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4] group-hover:text-[#f9a8d4] transition-colors duration-300">
                 {project.name}
               </h3>
-              <p className="text-sm text-[#6b6b6b] leading-relaxed flex-1">{project.description}</p>
+              <p className="text-sm text-[#a0a0a0] leading-relaxed flex-1">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-[#242424]">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-[10px] tracking-wide uppercase text-[#6b6b6b]">{tag}</span>
+                  <span key={tag} className="text-[10px] tracking-wide uppercase text-[#a0a0a0]">{tag}</span>
                 ))}
               </div>
             </motion.a>
@@ -107,7 +107,7 @@ export default function Projects() {
             href="https://github.com/pilena"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-widest uppercase text-[#6b6b6b] hover:text-[#f9a8d4] transition-colors duration-300"
+            className="text-xs tracking-widest uppercase text-[#a0a0a0] hover:text-[#f9a8d4] transition-colors duration-300"
           >
             See all on GitHub →
           </a>
