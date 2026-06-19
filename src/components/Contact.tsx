@@ -8,7 +8,7 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="contact" className="py-40 px-8 md:px-20 border-t border-[#242424]" ref={ref}>
+    <section id="contact" className="py-32 px-8 md:px-20 border-t border-[#242424]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
