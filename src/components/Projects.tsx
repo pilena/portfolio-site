@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
 
 const projects = [
@@ -51,13 +51,14 @@ const projects = [
 export default function Projects() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
+  const reduceMotion = useReducedMotion()
 
   return (
     <section id="projects" className="py-32 px-8 md:px-20 border-t border-[#242424]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={reduceMotion ? {} : { opacity: 0, y: 20 }}
+          animate={reduceMotion ? { opacity: 1, y: 0 } : (inView ? { opacity: 1, y: 0 } : {})}
           transition={{ duration: 0.7 }}
           className="mb-16"
         >
@@ -75,8 +76,8 @@ export default function Projects() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={reduceMotion ? {} : { opacity: 0, y: 20 }}
+              animate={reduceMotion ? { opacity: 1, y: 0 } : (inView ? { opacity: 1, y: 0 } : {})}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.08 }}
               className="group bg-[#0e0e0e] p-8 flex flex-col gap-4 hover:bg-[#161616] transition-colors duration-300"
             >
@@ -98,8 +99,8 @@ export default function Projects() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
+          initial={reduceMotion ? {} : { opacity: 0 }}
+          animate={reduceMotion ? { opacity: 1 } : (inView ? { opacity: 1 } : {})}
           transition={{ delay: 0.8 }}
           className="mt-8 text-center"
         >

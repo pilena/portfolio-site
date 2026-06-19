@@ -1,18 +1,19 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
 
 export default function Contact() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
+  const reduceMotion = useReducedMotion()
 
   return (
     <section id="contact" className="py-32 px-8 md:px-20 border-t border-[#242424]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={reduceMotion ? {} : { opacity: 0, y: 30 }}
+          animate={reduceMotion ? { opacity: 1, y: 0 } : (inView ? { opacity: 1, y: 0 } : {})}
           transition={{ duration: 0.9 }}
           className="text-center"
         >
@@ -35,6 +36,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/lenka-zivkovic/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile - opens in a new tab"
               className="text-xs tracking-widest uppercase text-[#a0a0a0] hover:text-[#f9a8d4] transition-colors duration-300"
             >
               LinkedIn
@@ -43,6 +45,7 @@ export default function Contact() {
               href="https://github.com/pilena"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile - opens in a new tab"
               className="text-xs tracking-widest uppercase text-[#a0a0a0] hover:text-[#f9a8d4] transition-colors duration-300"
             >
               GitHub
@@ -52,8 +55,8 @@ export default function Contact() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
+        initial={reduceMotion ? {} : { opacity: 0 }}
+        animate={reduceMotion ? { opacity: 1 } : (inView ? { opacity: 1 } : {})}
         transition={{ delay: 0.5 }}
         className="mt-24 pt-8 border-t border-[#242424] flex justify-between items-center text-[10px] tracking-widest uppercase text-[#a0a0a0]"
       >

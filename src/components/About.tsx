@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
 
 const skills = [
@@ -14,14 +13,15 @@ const skills = [
 export default function About() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
+  const reduceMotion = useReducedMotion()
 
   return (
     <section id="about" className="py-32 px-8 md:px-20" ref={ref}>
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-start">
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={reduceMotion ? {} : { opacity: 0, y: 30 }}
+          animate={reduceMotion ? { opacity: 1, y: 0 } : (inView ? { opacity: 1, y: 0 } : {})}
           transition={{ duration: 0.8 }}
         >
           <p className="text-xs tracking-[0.3em] uppercase text-[#f9a8d4] mb-4">About me</p>
@@ -52,6 +52,7 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs tracking-widest uppercase text-[#f9a8d4] border-b border-[#f9a8d4]/40 hover:border-[#f9a8d4] transition-colors pb-0.5"
+              aria-label="LinkedIn profile - opens in a new tab"
             >
               LinkedIn
             </a>
@@ -60,6 +61,7 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs tracking-widest uppercase text-[#a0a0a0] border-b border-[#a0a0a0]/40 hover:text-[#f9a8d4] hover:border-[#f9a8d4] transition-colors pb-0.5"
+              aria-label="GitHub profile - opens in a new tab"
             >
               GitHub
             </a>
@@ -67,8 +69,8 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={reduceMotion ? {} : { opacity: 0, y: 30 }}
+          animate={reduceMotion ? { opacity: 1, y: 0 } : (inView ? { opacity: 1, y: 0 } : {})}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-xs tracking-[0.3em] uppercase text-[#a0a0a0] mb-6">Tech stack</p>
@@ -76,8 +78,8 @@ export default function About() {
             {skills.map((skill, i) => (
               <motion.span
                 key={skill}
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                initial={reduceMotion ? {} : { opacity: 0, scale: 0.85 }}
+                animate={reduceMotion ? { opacity: 1, scale: 1 } : (inView ? { opacity: 1, scale: 1 } : {})}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.04 }}
                 className="text-xs px-3 py-1.5 border border-[#242424] text-[#a0a0a0] hover:border-[#f9a8d4]/50 hover:text-[#f9a8d4] transition-all duration-300"
               >

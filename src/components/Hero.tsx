@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 
 const roles = ['Frontend Developer', 'React & Next.js Specialist', 'Tech Lead', 'UI Perfectionist']
@@ -10,6 +10,7 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayed, setDisplayed] = useState('')
   const [deleting, setDeleting] = useState(false)
+  const reduceMotion = useReducedMotion()
 
   useEffect(() => {
     const current = roles[roleIndex]
@@ -34,7 +35,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
 
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
+          initial={reduceMotion ? {} : { opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
         >
@@ -45,11 +46,16 @@ export default function Hero() {
             Lenka<br />
             <span className="italic">Živković</span>
           </h1>
-          <div className="flex items-center gap-3 mb-8 h-7">
-            <span className="text-[#f9a8d4] text-sm tracking-wide font-light">
+          <div
+            className="flex items-center gap-3 mb-8 h-7"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-label={deleting ? '' : displayed}
+          >
+            <span className="text-[#f9a8d4] text-sm tracking-wide font-light" aria-hidden="true">
               {displayed}
             </span>
-            <span className="w-px h-4 bg-[#f9a8d4] animate-pulse" />
+            <span className="w-px h-4 bg-[#f9a8d4] animate-pulse" aria-hidden="true" />
           </div>
           <p className="text-[#a0a0a0] text-sm leading-relaxed max-w-md mb-10">
             Five years building complete web solutions — from concept to production.
@@ -72,12 +78,12 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={reduceMotion ? {} : { opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative flex justify-center"
         >
-          <div className="relative w-72 h-96 md:w-80 md:h-[440px]">
+          <div className="relative w-72 h-96 md:w-80 md:h-440px">
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 src="/lenka.jpg"
@@ -100,7 +106,7 @@ export default function Hero() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={reduceMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
             className="absolute bottom-6 -left-4 bg-[#161616] border border-[#242424] px-4 py-3"

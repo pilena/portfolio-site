@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
 
 const jobs = [
@@ -47,13 +47,14 @@ const jobs = [
 export default function Experience() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
+  const reduceMotion = useReducedMotion()
 
   return (
     <section id="experience" className="py-32 px-8 md:px-20 border-t border-[#242424]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={reduceMotion ? {} : { opacity: 0, y: 20 }}
+          animate={reduceMotion ? { opacity: 1, y: 0 } : (inView ? { opacity: 1, y: 0 } : {})}
           transition={{ duration: 0.7 }}
           className="mb-16"
         >
@@ -71,8 +72,8 @@ export default function Experience() {
             {jobs.map((job, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
+                initial={reduceMotion ? {} : { opacity: 0, x: -20 }}
+                animate={reduceMotion ? { opacity: 1, x: 0 } : (inView ? { opacity: 1, x: 0 } : {})}
                 transition={{ duration: 0.7, delay: 0.1 + i * 0.15 }}
                 className="relative"
               >
