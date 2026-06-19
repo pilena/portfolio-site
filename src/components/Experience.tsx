@@ -36,7 +36,7 @@ const jobs = [
     location: 'Belgrade, Serbia',
     period: '2019 — 2020',
     bullets: [
-      'Built responsive websites using HTML, CSS, JavaScript, and early React setups',
+      'Built responsive websites using HTML, CSS, JavaScript and early React setups',
       'Contributed to migrations from traditional WordPress to headless React/Next.js',
       'Implemented SEO optimizations, improving Lighthouse and Core Web Vitals scores',
       'Translated Figma prototypes into pixel-perfect, cross-browser interfaces',
@@ -77,7 +77,7 @@ export default function Experience() {
                 transition={{ duration: 0.7, delay: 0.1 + i * 0.15 }}
                 className="relative"
               >
-                <div className="absolute -left-8 md:-left-16 top-1.5 w-2 h-2 rounded-full border border-[#f9a8d4] bg-[#0e0e0e]" />
+                <div className="absolute -left-8 md:-left-16 top-1.5 w-2 h-2 bg-[#f9a8d4] rounded-full border border-[#f9a8d4] bg-[#0e0e0e]" />
 
                 <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-3 gap-1">
                   <h3 className="font-['Cormorant_Garamond'] text-2xl text-[#f0ece4]">
@@ -88,8 +88,8 @@ export default function Experience() {
                 <p className="text-xs tracking-wide text-[#f9a8d4] mb-4 uppercase">{job.company} · {job.location}</p>
                 <ul className="space-y-2">
                   {job.bullets.map((b, j) => (
-                    <li key={j} className="text-sm text-[#a0a0a0] leading-relaxed flex gap-3">
-                      <span className="text-[#f9a8d4]/40 mt-1 flex-shrink-0">—</span>
+                    <li key={j} className="text-sm text-[#a0a0a0] leading-relaxed flex items-center gap-3">
+                      <span className="text-[#f9a8d4]/40 ">—</span>
                       {b}
                     </li>
                   ))}

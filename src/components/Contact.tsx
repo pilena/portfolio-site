@@ -23,7 +23,7 @@ export default function Contact() {
             <span className="italic">together</span>
           </h2>
           <p className="text-sm text-[#a0a0a0] max-w-sm mx-auto mb-12 leading-relaxed">
-            Open to new opportunities — whether that&apos;s a full-time role, a freelance project, or just a conversation.
+            Open to new opportunities - whether that&apos;s a full-time role, a freelance project or just a conversation.
           </p>
           <a
             href="mailto:lenkazivkovic24@gmail.com"
@@ -61,7 +61,7 @@ export default function Contact() {
         className="mt-24 pt-8 border-t border-[#242424] flex justify-between items-center text-[10px] tracking-widest uppercase text-[#a0a0a0]"
       >
         <span>Lenka Živković</span>
-        <span>© 2025</span>
+        <span>© {new Date().getFullYear()}</span>
       </motion.div>
     </section>
   )

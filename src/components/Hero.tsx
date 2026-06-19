@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 
-const roles = ['Frontend Developer', 'React & Next.js Specialist', 'Tech Lead', 'UI Perfectionist']
+const roles = ['Frontend Developer', 'React & Next.js Developer', 'Tech Lead', 'UI Perfectionist']
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
@@ -58,8 +58,8 @@ export default function Hero() {
             <span className="w-px h-4 bg-[#f9a8d4] animate-pulse" aria-hidden="true" />
           </div>
           <p className="text-[#a0a0a0] text-sm leading-relaxed max-w-md mb-10">
-            Five years building complete web solutions — from concept to production.
-            Specializing in React, Next.js, and headless e-commerce platforms.
+            Five years building complete web solutions - from concept to production.
+            Specializing in React, Next.js and headless e-commerce platforms.
           </p>
           <div className="flex gap-4">
             <a

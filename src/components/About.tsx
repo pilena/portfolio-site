@@ -32,7 +32,7 @@ export default function About() {
           <div className="space-y-4 text-[#a0a0a0] text-sm leading-relaxed">
             <p>
               I&apos;m a frontend developer based in Serbia with five years of experience
-              delivering complete web solutions — from early discovery and design phases
+              delivering complete web solutions - from early discovery and design phases
               through to production and post-launch optimization.
             </p>
             <p>
@@ -41,9 +41,6 @@ export default function About() {
               I specialize in scalable React and Next.js architectures, headless e-commerce
               with WooCommerce, and working closely with design teams to produce
               pixel-perfect interfaces.
-            </p>
-            <p>
-              When I&apos;m not building for the web, you&apos;ll find me reading.
             </p>
           </div>
           <div className="mt-8 flex gap-4">
