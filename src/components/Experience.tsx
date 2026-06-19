@@ -18,7 +18,7 @@ const jobs = [
     ],
   },
   {
-    role: 'Frontend Developer — Mid-level',
+    role: 'Frontend Developer (React) - Mid-level',
     company: 'Forga',
     location: 'Belgrade, Serbia',
     period: '2020 — 2022',
