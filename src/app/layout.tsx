@@ -30,6 +30,14 @@ export const metadata: Metadata = {
     description:
       "Frontend developer specializing in React and Next.js with five years of experience. Based in Serbia, available for remote work.",
     siteName: "Lenka Živković Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lenka Živković — Frontend Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
