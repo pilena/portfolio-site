@@ -8,8 +8,9 @@
   --surface: #161616;
   --border: #242424;
   --text: #f0ece4;
-  --muted: #6b6b6b;
+  --muted: #a0a0a0;
 }
+
 
 * {
   cursor: none;
