@@ -11,6 +11,9 @@
   --muted: #a0a0a0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body.custom-cursor-active * {
   cursor: none;
