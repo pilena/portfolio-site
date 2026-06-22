@@ -5,6 +5,27 @@ import { useRef } from 'react'
 
 const projects = [
   {
+    name: 'This portfolio',
+    description: 'The site you\'re looking at right now. Built with Next.js, Tailwind CSS, and Framer Motion, with a live Goodreads integration and full SEO setup.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    url: 'https://lenka-zivkovic.vercel.app',
+    type: 'Personal',
+  },
+  {
+    name: 'Instagram Scraper',
+    description: 'A script for collecting and extracting public Instagram data, exploring scraping techniques and data handling outside of typical frontend work.',
+    tags: ['Typescript', 'Node.js', 'Express'],
+    url: 'https://github.com/pilena/Instagram-scraper',
+    type: 'Personal',
+  },
+  {
+    name: 'Luke the Crook',
+    description: 'A 2D platformer game built in Unity. My first dive into game development, level design, and character movement mechanics.',
+    tags: ['Unity', 'C#'],
+    url: 'https://github.com/pilena/Luke-the-Crook',
+    type: 'Personal',
+  },
+  {
     name: 'Republika Fud',
     description: 'Website for a burger restaurant. Built with a focus on clean layout, brand consistency, and a smooth user experience.',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -20,31 +41,10 @@ const projects = [
   },
   {
     name: 'ASAP',
-    description: 'Website for All Stars Alliance Pančevo — a local organization. Full build from design to deployment.',
+    description: 'Website for All Stars Alliance Pančevo - a local organization. Full build from design to deployment.',
     tags: ['HTML', 'CSS', 'JavaScript'],
     url: 'https://github.com/pilena/ASAP',
     type: 'Client work',
-  },
-  {
-    name: 'Meme Generator',
-    description: 'React app that fetches meme templates from the Imgflip API and lets you caption them. A fun exploration of React state and API integration.',
-    tags: ['React', 'API', 'JavaScript'],
-    url: 'https://github.com/pilena/react-memegenerator',
-    type: 'Personal',
-  },
-  {
-    name: 'Tic Tac Toe',
-    description: 'Classic game built with React. Straightforward implementation of game state management and component architecture.',
-    tags: ['React', 'TypeScript'],
-    url: 'https://github.com/pilena/tictactoe',
-    type: 'Personal',
-  },
-  {
-    name: 'TypeScript Party',
-    description: 'Practice project exploring TypeScript fundamentals — state, props, functions, and events in a component-based architecture.',
-    tags: ['React', 'TypeScript'],
-    url: 'https://github.com/pilena/typescript-party-project',
-    type: 'Personal',
   },
 ]
 
