@@ -4,17 +4,31 @@ import { useEffect, useState } from 'react'
 
 export default function Cursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 })
+  const [isCoarsePointer, setIsCoarsePointer] = useState(() =>
+    typeof window === 'undefined' ? true : window.matchMedia('(pointer: coarse)').matches
+  )
 
   useEffect(() => {
-    document.body.classList.add('custom-cursor-active')
-    return () => document.body.classList.remove('custom-cursor-active')
+    const mq = window.matchMedia('(pointer: coarse)')
+    const onChange = (e: MediaQueryListEvent) => setIsCoarsePointer(e.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
   }, [])
 
   useEffect(() => {
+    if (isCoarsePointer) return
+    document.body.classList.add('custom-cursor-active')
+    return () => document.body.classList.remove('custom-cursor-active')
+  }, [isCoarsePointer])
+
+  useEffect(() => {
+    if (isCoarsePointer) return
     const move = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY })
     window.addEventListener('mousemove', move)
     return () => window.removeEventListener('mousemove', move)
-  }, [])
+  }, [isCoarsePointer])
+
+  if (isCoarsePointer) return null
 
   return (
     <div
